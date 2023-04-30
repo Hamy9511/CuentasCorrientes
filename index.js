@@ -23,7 +23,7 @@ cuentaDeMaria.numero ="2";
 cuentaDeMaria.agencia = '002';
 cuentaDeMaria.cliente = cliente2;
 
-//cuentaDeLeonardo.#saldo = 10;
+console.log(cuentaDeMaria.cliente);
 
 cuentaDeLeonardo.depositoEnCuenta(150);
 let saldo = cuentaDeLeonardo.verSaldo(); 
