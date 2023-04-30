@@ -3,37 +3,20 @@
 import {Cliente} from "./Cliente.js"
 import {CuentaCorriente} from "./CuentaCorriente.js"
 
-const cliente = new Cliente ();
-cliente.nombreCliente = "Leonardo";
-cliente.dniCliente = "12234242";
-cliente.rutCliente = "2324";
+const cliente = new Cliente ("leonardo", "12345", "24242424");
+const cliente2 = new Cliente ("Maria", "242313256", "34535");
 
-const cuentaDeLeonardo = new CuentaCorriente();
-cuentaDeLeonardo.numero ="1";
-cuentaDeLeonardo.agencia = '001';
-cuentaDeLeonardo.cliente = cliente;
 
-const cliente2 = new Cliente ();
-cliente2.nombreCliente = "Maria";
-cliente2.dniCliente = "353353";
-cliente2.rutCliente = "3534534";
-
-const cuentaDeMaria = new CuentaCorriente();
-cuentaDeMaria.numero ="2";
-cuentaDeMaria.agencia = '002';
-cuentaDeMaria.cliente = cliente2;
-
-console.log(cuentaDeMaria.cliente);
+const cuentaDeLeonardo = new CuentaCorriente(cliente, "1", "001");
+const cuentaDeMaria = new CuentaCorriente(cliente2, "2", "002" );
 
 cuentaDeLeonardo.depositoEnCuenta(150);
 let saldo = cuentaDeLeonardo.verSaldo(); 
 console.log("El saldo actual (cuentaLeonardo)" + saldo);
-
 cuentaDeLeonardo.transferirParaCuenta(100,cuentaDeMaria);
-
 let saldoMaria = cuentaDeMaria.verSaldo();
-
 console.log("El Saldo actual (cuentaMaria)" + saldoMaria);
-
 let saldo2 = cuentaDeLeonardo.verSaldo();
 console.log("El saldo actual (cuentaLeonardo)" + saldo2);
+
+console.log(CuentaCorriente.cantidadCuentas);

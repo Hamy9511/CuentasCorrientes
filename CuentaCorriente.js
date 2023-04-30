@@ -8,6 +8,7 @@ export /*Para exportar la clase*/ class CuentaCorriente //Claases usada para lo 
     numero;
     #saldo; //Vuelve el atributo privado, quiere decir que solo se declara con la clase.
     agencia;
+    static cantidadCuentas = 0 ; //commun para todas las cuentas
 
     //SET Y GET PROTEGEN EL CODIGO DE DAÑOS
     set cliente(valor){ //para acceder a valores privados
@@ -19,11 +20,12 @@ export /*Para exportar la clase*/ class CuentaCorriente //Claases usada para lo 
         return this.#cliente;
     }
     //CONSTRUCTOR QUE INICIA CUANDO LA INSTANCIA INICIA
-    constructor() { //Sirve para que al iniciar esta parte del codigo ya este definido los valores
-        this.#cliente = null;
+    constructor(cliente, numero, agencia) { //Sirve para que al iniciar esta parte del codigo ya este definido los valores
+        this.cliente = cliente;
+        this.numero = numero;
+        this.agencia = agencia;
         this.#saldo = 0;
-        this.numero = '';
-        this.agencia = '';
+        CuentaCorriente.cantidadCuentas++;
     }
 
     //METODOS DE LAS CLASES
@@ -43,7 +45,7 @@ export /*Para exportar la clase*/ class CuentaCorriente //Claases usada para lo 
         return this.#saldo;
     }
 
-    transferirParaCuenta(valor,cuentaDestino){ //Funcio que sirve para transferir dinero de una cuenta a otra
+    transferirParaCuenta(valor,cuentaDestino){ //Funcion que sirve para transferir dinero de una cuenta a otra
         //Valor es un parametro de valor y cuentaDestino es de referencia es decir que el valor no puede ser modificado por la "caja" que esta funcion
         this.retirarDeCuenta(valor);
         cuentaDestino.depositoEnCuenta(valor);
