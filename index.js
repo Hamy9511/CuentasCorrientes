@@ -9,9 +9,9 @@ const cliente = new Cliente ("leonardo", "12345", "24242424");
 const cliente2 = new Cliente ("Maria", "242313256", "34535");
 
 
-const cuentaCorrienteLeonardo = new Cuenta(cliente, "1", "001", 0);
-const cuentaDeMaria = new Cuenta(cliente2, "2", "002" );
-const cuentaDeAhorroLeonardo = new Cuenta(cliente, "2455", "001", 0);
+const cuentaCorrienteLeonardo = new Cuenta("corriente", cliente, "1", "001", 0);
+const cuentaDeMaria = new Cuenta("corriente", cliente2, "2", "002" );
+const cuentaDeAhorroLeonardo = new Cuenta("ahorro", cliente, "2455", "001", 0);
 
 console.log(cuentaCorrienteLeonardo);
 cuentaCorrienteLeonardo.depositoEnCuenta(150);
