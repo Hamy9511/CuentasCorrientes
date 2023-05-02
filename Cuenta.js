@@ -36,6 +36,10 @@ export class Cuenta{
         transferirParaCuenta(valor,cuentaDestino){ 
             this.retirarDeCuenta(valor);
             cuentaDestino.depositoEnCuenta(valor);
+            valor =200;
+            valor = valor*1000;
         }
-    
+    prueba(){
+        console.log("mmetodo Padre");
+    }
 }
