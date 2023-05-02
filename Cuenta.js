@@ -26,8 +26,8 @@ export class Cuenta{
             return this.#saldo;
         }
 
-        _retirarDeCuenta(valor){
-            _retirarDeCuenta(valor,0);
+        retirarDeCuenta(valor){ //Lo convertimos en un metodo abstracto
+            throw error("Debe de implementar retirarDeCuenta y la comision dentro de la clase"); 
         }
     
         _retirarDeCuenta(valor,comision) {
@@ -47,7 +47,4 @@ export class Cuenta{
             valor =200;
             valor = valor*1000;
         }
-    prueba(){
-        console.log("mmetodo Padre");
-    }
 }
