@@ -13,14 +13,5 @@ const cuentaCorrienteLeonardo = new CuentaCorriente(cliente, "1", "001");
 const cuentaDeMaria = new CuentaCorriente(cliente2, "2", "002" );
 const cuentaDeAhorroLeonardo = new CuentaAhorro(cliente, "2455", "001", 0);
 
-console.log(cuentaCorrienteLeonardo);
-cuentaCorrienteLeonardo.depositoEnCuenta(150);
-console.log(cuentaCorrienteLeonardo.verSaldo());
-cuentaCorrienteLeonardo.retirarDeCuenta(70);
-console.log(cuentaCorrienteLeonardo.verSaldo());
-console.log(cuentaDeAhorroLeonardo);
-cuentaDeAhorroLeonardo.depositoEnCuenta(200);
-console.log(cuentaDeAhorroLeonardo.verSaldo());
-cuentaDeAhorroLeonardo.retirarDeCuenta(120);
-console.log(cuentaDeAhorroLeonardo.verSaldo());
-
+const cuentaSimple = new Cuenta(cliente, "098", "003",100);
+console.log(cuentaSimple);
