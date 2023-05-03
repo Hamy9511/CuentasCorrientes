@@ -2,7 +2,8 @@ export class Empleado{
     #nombre
     #dni
     #salario
-    #clave;
+    #clave
+    
     constructor(nombre, dni, salario){
         this.#nombre = nombre;
         this.#dni = dni;

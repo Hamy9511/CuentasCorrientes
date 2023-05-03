@@ -8,7 +8,8 @@ export class Cliente  //clase usada para ls datos del cliente
     dniCliente;
     rutCliente;
     #clave;
-
+    autenticable;
+    
     constructor(nombreCliente, dniCliente, rutCliente){
         this.nombreCliente = nombreCliente;
         this.dniCliente = dniCliente;
