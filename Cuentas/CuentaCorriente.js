@@ -1,5 +1,5 @@
 import { Cuenta } from "./Cuenta.js";
-import { Cliente } from "./Cliente.js";
+import { Cliente } from "../Cliente.js";
 
 
 export class CuentaCorriente extends Cuenta{
