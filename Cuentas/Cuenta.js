@@ -29,7 +29,7 @@ export class Cuenta{
         retirarDeCuenta(valor){ //Lo convertimos en un metodo abstracto
             throw error("Debe de implementar retirarDeCuenta y la comision dentro de la clase"); 
         }
-    
+        
         _retirarDeCuenta(valor,comision) {
             valor = valor*(1+comision/100);
             if (valor <= this.#saldo)
